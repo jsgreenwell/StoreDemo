@@ -1,0 +1,6 @@
+HP Printer,5
+Dell laptop,9
+Macbooks,10
+Electric Razor,20
+Smart TV,9
+Playstation 5,1
