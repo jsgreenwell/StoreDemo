@@ -1,9 +1,11 @@
 package inventory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import loggers.BasicLogWriter;
 
 public class InventoryControl {
   // Here we need to load our inventory from our inventory file: How can we do that?
@@ -14,8 +16,11 @@ public class InventoryControl {
   // Now we still want the list but also need our own Map in some versions so adding
   Map<String, Integer> itemsQty = new HashMap<>();
 
+  // Add logs
+  BasicLogWriter log = new BasicLogWriter();
+
   // load our Inventory on start
-  public InventoryControl() {
+  public InventoryControl() throws IOException {
     loadInventory();
   }
 

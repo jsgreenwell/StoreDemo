@@ -13,7 +13,7 @@ public class FoodInventory extends InventoryControl {
   // Uses List from parent class (items)
 
   // load basic constructor (inherited from parent)
-  public FoodInventory() {
+  public FoodInventory() throws IOException {
     super();
   }
 
@@ -33,6 +33,7 @@ public class FoodInventory extends InventoryControl {
 
       reader.close();
     } catch (FileNotFoundException ex) {
+
       System.out.println("File does not exist: " + ex.getStackTrace());
     } catch (IOException e) {
       System.out.println("Problem reading file: " + e.getStackTrace());

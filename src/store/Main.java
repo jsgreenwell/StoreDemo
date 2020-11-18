@@ -2,9 +2,10 @@ package store;
 
 import inventory.ElectronicInventory;
 import inventory.FoodInventory;
+import java.io.IOException;
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     FoodInventory inv = new FoodInventory();
     inv.printInventory();
 

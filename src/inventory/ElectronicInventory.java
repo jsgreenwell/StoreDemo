@@ -4,15 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
 public class ElectronicInventory extends InventoryControl {
 
   // Here we need to load our food inventory options from "foodstuff"
 
   // load basic constructor (inherited from parent)
-  public ElectronicInventory() {
+  public ElectronicInventory() throws IOException {
     super();
   }
 
@@ -40,9 +39,9 @@ public class ElectronicInventory extends InventoryControl {
 
       reader.close();
     } catch (FileNotFoundException ex) {
-      System.out.println("File does not exist: " + ex.getStackTrace());
+      log.FAILURE("File does not exist: " + ex.getStackTrace());
     } catch (IOException e) {
-      System.out.println("Problem reading file: " + e.getStackTrace());
+      log.FAILURE("Problem reading file: " + e.getStackTrace());
     }
   }
 
